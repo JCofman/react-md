@@ -85,7 +85,7 @@
     "react-test-renderer": "^16.13.1",
     "sass-lint": "^1.13.1",
     "ts-jest": "^25.5.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   },
   "husky": {
     "hooks": {
