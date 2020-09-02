@@ -20,7 +20,12 @@ export default function useAppSize(): AppSize {
   const { __initialized, ...context } = useContext(AppSizeContext);
   if (!__initialized) {
     throw new Error(
-      "Attempted to use the current `AppSizeContext` without mounting the `AppSizeListener` component beforehand."
+      "Unable to get the current `AppSize` from `react-md` because the `AppSizeListener` " +
+        "could not be found when using the `useAppSize` hook. To fix this error, either " +
+        "initialize the `AppSizeListener` component from `@react-md/utils` or the " +
+        "`Configuration` component from `@react-md/layout` near the root of your app.\n\n" +
+        "Note: this error could also occur if there are multiple versions of `@react-md/utils` " +
+        "installed in your app."
     );
   }
 
